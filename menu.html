@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      background: url('./slider/wr.jpg') no-repeat center/cover;
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      margin: 0;
+      line-height: 400px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #333;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      margin: 20px 0;
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      background: white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    li:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .menu-details {
+      flex: 1;
+      text-align: left;
+    }
+
+    .menu-details h3 {
+      font-size: 18px;
+      color: #007bff;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .menu-details p {
+      font-size: 16px;
+      color: #555;
+      margin: 5px 0 0 0;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    a:hover {
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    a:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+        line-height: 250px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      li {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .menu-details {
+        text-align: center;
+      }
+
+      a {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Restoran Kami</h1>
+  </header>
+  <main>
+    <h2>Daftar Menu</h2>
+    <ul>
+      <li>
+        <img src="./image/food1.jpg" alt="Nasi Goreng">
+        <div class="menu-details">
+          <h3>Nasi Goreng</h3>
+          <p>Harga: Rp10,000</p>
+        </div>
+        <a href="order.html?menu=Nasi%20Goreng&harga=10000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food2.jpg" alt="Mie Ayam">
+        <div class="menu-details">
+          <h3>Mie Ayam</h3>
+          <p>Harga: Rp15,000</p>
+        </div>
+        <a href="order.html?menu=Mie%20Ayam&harga=15000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food3.jpg" alt="Sate Ayam">
+        <div class="menu-details">
+          <h3>Sate Ayam</h3>
+          <p>Harga: Rp20,000</p>
+        </div>
+        <a href="order.html?menu=Sate%20Ayam&harga=20000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food4.jpg" alt="Soto Betawi">
+        <div class="menu-details">
+          <h3>Soto Betawi</h3>
+          <p>Harga: Rp25,000</p>
+        </div>
+        <a href="order.html?menu=Soto%20Betawi&harga=25000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food5.jpg" alt="Rendang">
+        <div class="menu-details">
+          <h3>Rendang</h3>
+          <p>Harga: Rp35,000</p>
+        </div>
+        <a href="order.html?menu=Rendang&harga=35000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food6.jpg" alt="Gado-Gado">
+        <div class="menu-details">
+          <h3>Gado-Gado</h3>
+          <p>Harga: Rp15,000</p>
+        </div>
+        <a href="order.html?menu=Gado-Gado&harga=15000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food7.jpg" alt="Bakso">
+        <div class="menu-details">
+          <h3>Bakso</h3>
+          <p>Harga: Rp20,000</p>
+        </div>
+        <a href="order.html?menu=Bakso&harga=20000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food8.jpg" alt="Ayam Bakar">
+        <div class="menu-details">
+          <h3>Ayam Bakar</h3>
+          <p>Harga: Rp25,000</p>
+        </div>
+        <a href="order.html?menu=Ayam%20Bakar&harga=25000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/food9.jpg" alt="Pecel Lele">
+        <div class="menu-details">
+          <h3>Pecel Lele</h3>
+          <p>Harga: Rp18,000</p>
+        </div>
+        <a href="order.html?menu=Pecel%20Lele&harga=18000">Pesan</a>
+      </li>
+      <li>
+        <img src="./image/drink1.jpg" alt="Es Teler">
+        <div class="menu-details">
+          <h3>Es Teler</h3>
+          <p>Harga: Rp12,000</p>
+        </div>
+        <a href="order.html?menu=Es%20Teler&harga=12000">Pesan</a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
